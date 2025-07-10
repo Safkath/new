@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Neon Profile Slider</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      background-color: black;
+      color: white;
+      font-family: Arial, sans-serif;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    .slider-container {
+      height: 100vh;
+      overflow-y: auto;
+      scroll-snap-type: y mandatory;
+      scroll-behavior: smooth;
+    }
+
+    .profile {
+      height: 100vh;
+      scroll-snap-align: start;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 40px;
+      box-sizing: border-box;
+    }
+
+    .profile-pic {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      margin-bottom: 20px;
+      overflow: hidden;
+      border: 3px solid white;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .profile-pic img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .name {
+      font-size: 2.2rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+      text-shadow:
+        0 0 5px white,
+        0 0 10px white;
+    }
+
+    .bio {
+      font-size: 1.1rem;
+      max-width: 600px;
+      text-align: center;
+      line-height: 1.5;
+      color: #ccc;
+    }
+
+    /* Individual Neon Colors */
+    .neta .profile-pic {
+      box-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 30px #0ff;
+    }
+
+    .honumonu .profile-pic {
+      box-shadow: 0 0 10px #0f0, 0 0 20px #0f0, 0 0 30px #0f0;
+    }
+
+    .luccha .profile-pic {
+      box-shadow: 0 0 10px #f0f, 0 0 20px #f0f, 0 0 30px #f0f;
+    }
+
+    .shanda .profile-pic {
+      box-shadow: 0 0 10px #a0f, 0 0 20px #a0f, 0 0 30px #a0f;
+    }
+
+    /* Hover glow boost */
+    .profile:hover .profile-pic {
+      transform: scale(1.05);
+    }
+
+    .neta:hover .profile-pic {
+      box-shadow: 0 0 20px #0ff, 0 0 40px #0ff, 0 0 60px #0ff;
+    }
+
+    .honumonu:hover .profile-pic {
+      box-shadow: 0 0 20px #0f0, 0 0 40px #0f0, 0 0 60px #0f0;
+    }
+
+    .luccha:hover .profile-pic {
+      box-shadow: 0 0 20px #f0f, 0 0 40px #f0f, 0 0 60px #f0f;
+    }
+
+    .shanda:hover .profile-pic {
+      box-shadow: 0 0 20px #a0f, 0 0 40px #a0f, 0 0 60px #a0f;
+    }
+
+    .slider-container::-webkit-scrollbar {
+      width: 0px;
+      background: transparent;
+    }
+  </style>
+</head>
+<body>
+  <div class="slider-container">
+    <!-- Neta -->
+    <div class="profile neta">
+      <div class="profile-pic">
+        <img src="eshan.jpg" alt="Neta">
+      </div>
+      <div class="name">Neta</div>
+      <div class="bio">
+        Alakar neta beshi biri khai, fusfus kala. Gali dei onek, but act vodro whenever he goes infront of someone's parents.
+      </div>
+    </div>
+
+    <!-- Honumonukalidasha -->
+    <div class="profile honumonu">
+      <div class="profile-pic">
+        <img src="me.jpg" alt="Honumonukalidasha">
+      </div>
+      <div class="name">Honumonukalidasha</div>
+      <div class="bio">
+        A vodro chele. Gali dei na, biri khaina. PURE Innocent.
+      </div>
+    </div>
+
+    <!-- Luccha -->
+    <div class="profile luccha">
+      <div class="profile-pic">
+        <img src="shakil.jpg" alt="Luccha">
+      </div>
+      <div class="name">Luccha</div>
+      <div class="bio">
+        Really a luccha. Gay giri kore, haradin gali dei. Favourite gali: khankirpola.
+      </div>
+    </div>
+
+    <!-- Shanda -->
+    <div class="profile shanda">
+      <div class="profile-pic">
+        <img src="hasib.jpg" alt="Shanda">
+      </div>
+      <div class="name">Shanda</div>
+      <div class="bio">
+        Akti moruvumite thaka prani ja kina manushe rupantor hoyeche. Biri khai, but fusfus ektu kom kala hoise.
+      </div>
+    </div>
+  </div>
+</body>
+</html>
